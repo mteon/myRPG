@@ -64,6 +64,54 @@ public class Character {
         return expToLvlUp;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setPlayerClass(PlayerClass playerClass) {
+        this.playerClass = playerClass;
+    }
+
+    public void setHp(long hp) {
+        this.hp = hp;
+    }
+
+    public void setCurrentHP(long currentHP) {
+        this.currentHP = currentHP;
+    }
+
+    public void setMana(long mana) {
+        this.mana = mana;
+    }
+
+    public void setCurrentMana(long currentMana) {
+        this.currentMana = currentMana;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setTotalExp(long totalExp) {
+        this.totalExp = totalExp;
+    }
+
+    public void setExpToLvlUp(long expToLvlUp) {
+        this.expToLvlUp = expToLvlUp;
+    }
+
+    public void setPlayer(boolean player) {
+        isPlayer = player;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
+
     public boolean isPlayer() {
         return isPlayer;
     }

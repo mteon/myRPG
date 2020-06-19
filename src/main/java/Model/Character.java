@@ -119,4 +119,80 @@ public class Character {
     public ArrayList<Item> getInventory() {
         return inventory;
     }
+
+    public void setHeroStats () {
+            this.setHp(this.getHp()*(5/4));
+            this.setCurrentHP(this.getHp());
+            this.setMana(this.getMana()*(5/4));
+            this.setCurrentMana(this.getMana());
+    }
+
+    public void setMageStats () {
+        this.setHp(this.getHp()*(11/10));
+        this.setCurrentHP(this.getHp());
+        this.setMana(this.getMana()*(7/5));
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void setWarriorStats () {
+        this.setHp(this.getHp()*(3/2));
+        this.setCurrentHP(this.getHp());
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void setPriestStats () {
+        this.setHp(this.getHp()*(11/10));
+        this.setCurrentHP(this.getHp());
+        this.setMana(this.getMana()*(7/5));
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void setBardStats () {
+        this.setHp(this.getHp()*(11/10));
+        this.setCurrentHP(this.getHp());
+        this.setMana(this.getMana()*(7/5));
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void setThiefStats () {
+        this.setHp(this.getHp()*(6/5));
+        this.setCurrentHP(this.getHp());
+        this.setMana(this.getMana()*(6/5));
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void setMAStats () {
+        this.setHp(this.getHp()*(8/6));
+        this.setCurrentHP(this.getHp());
+        this.setCurrentMana(this.getMana());
+    }
+
+    public void lvlUp () {
+        if(this.getExpToLvlUp() == 0) {
+            this.setLevel(this.getLevel()+1);
+            this.setTotalExp(this.getTotalExp()*(3/2));
+            this.setExpToLvlUp(this.getTotalExp());
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.HERO) {
+                setHeroStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.MAGE) {
+                setMageStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.PRIEST) {
+                setPriestStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.BARD) {
+                setBardStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.WARRIOR) {
+                setWarriorStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.THIEF) {
+                setThiefStats();
+            }
+            if (this.getPlayerClass().getName() == PlayerClass.possibleClasses.MARTIAL_ARTIST) {
+                setMAStats();
+            }
+        }
+    }
 }
